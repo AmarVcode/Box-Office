@@ -1,0 +1,55 @@
+$main-color : rgb(250, 134, 134);
+
+header{
+    display: flex;
+    background-color: $main-color !important;
+    position: sticky;
+    top: 0;
+    .menu{
+        z-index: 1000;
+        display: flex;
+        width: 1.4rem;
+        align-items: center;
+        margin: .2em;margin-left: 1em;
+        cursor: pointer;
+        visibility: hidden;
+    }
+    .navbar{
+        display: flex;
+        width: 100%;
+        position: absolute;
+        top: 0;
+    background-color: $main-color;
+
+        a{
+            display: block;
+            padding: 1em 3em; 
+            font-size: 1rem;
+            text-decoration: none;
+            color: black;
+            &:hover{
+                background-color: red;
+                color: white;
+            }
+        }
+    }
+   
+
+}
+
+@media (max-width:800px) {
+
+    .menu{
+      visibility: visible !important;
+    }
+    .navbar{
+        display: grid !important;
+        grid-template-columns: 100%;
+        text-align: center;
+        transform-origin: top;
+        transform: scale(1,0);     
+    }
+    .shownavbar{
+        transform: scale(1,1);
+    }
+}

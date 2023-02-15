@@ -1,6 +1,36 @@
+$main-color : rgb(250, 134, 134);
+
 .main{
-    margin-top: 50px;
-    border: 1px solid violet;
-    max-width: 1000px;
+    max-width: 100%;
     margin: auto;
+    margin-top: 50px;
+
+    .searchbar{
+        border: 3px solid $main-color;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: auto 100px;
+        margin: 1em;
+        overflow: hidden;
+        input{
+            border: none;
+            padding: 1em;
+            font-size: 1rem;
+            &:focus{
+                outline: none;
+            }
+        }
+        button{
+            border: none;
+            border-left: 2px solid $main-color;
+            background-color: $main-color;
+            color: black;
+            font-size: 1rem;
+            cursor: pointer;
+            &:hover{
+                background-color: transparent;
+            }
+        }
+        
+    }
 }

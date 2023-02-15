@@ -1,0 +1,63 @@
+$main-color : rgb(250, 134, 134);
+
+.card-container{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+    .card{
+        border: 2px solid $main-color;
+        width: 230px;
+        padding: .5em;
+        margin: .5em;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+        .imgwrapper{
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 10px;
+            min-height: 290px;
+            img{
+            width: 100%;
+            &:hover{
+                transform-origin: top;
+                transform: scale(1.2);
+            }
+        }
+        }
+        h2{
+            font-size: 1.4rem;
+            word-spacing: 5px;
+            color: red;
+            width: 100%;
+            text-align: center;
+    }
+    h3{
+        font-size: .8rem;
+        font-weight: normal;
+        font-style: italic;
+        text-align: left;
+    }
+    a{
+        width: 100%;
+        font-size: .9rem;
+        font-style: italic;
+}
+
+button{
+    width:100%;
+    padding: .5em;
+    font-size: 1rem;
+    border: 2px solid $main-color;
+    background-color: $main-color;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+    &:hover{
+        background-color: red;
+        border-color: red;
+    }
+}
+
+}

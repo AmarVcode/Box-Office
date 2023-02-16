@@ -34,3 +34,14 @@ $main-color : rgb(250, 134, 134);
         
     }
 }
+
+.about{
+    width: 500px;
+    border: 3px solid $main-color;
+    margin: auto;
+    border-radius: 10px;
+    padding: 1em;
+    font-size: 1.4rem;
+    line-height: 40px;
+    color: $main-color;
+}

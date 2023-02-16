@@ -10,19 +10,19 @@ const savetolocal=(local:any)=>{
 let bool:any=true
 let localdata:any=localStorage.getItem("fav")||"[]";
 localdata=JSON.parse(localdata);
-for(let i=0;i<=localdata.length;i++){
+
     // console.log(localdata[i].id)
     if(localdata.length===0){
 bool=true
     }
-else if(localdata[i].id !== local.id){
-    bool=true;
-}
 else{
-    bool=false;
-    break;
+    localdata.map((elem:any)=>{
+        if(elem.id===local.id){
+            bool=false
+        }
+    })
 }
-}
+
 
 if(bool===true){
   localdata.push(local);  

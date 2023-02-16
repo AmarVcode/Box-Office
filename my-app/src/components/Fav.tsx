@@ -8,14 +8,14 @@ const Fav = () => {
 
 console.log(data)
 const removedata=(item:any,i:number)=>{
-    console.log(item,i)
+    let data:any=localStorage.getItem("fav")||"[]";
+    data=JSON.parse(data);
     let d:any=document.getElementById(item)
    d.remove()
 
 data.splice(i,1)
 data=JSON.stringify(data);
 localStorage.setItem("fav",data)
-window.location.reload()
 }
 
   return (

@@ -4,6 +4,7 @@ $main-color : rgb(250, 134, 134);
 display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
+overflow: hidden;
     .card{
         border: 2px solid $main-color;
         width: 230px;

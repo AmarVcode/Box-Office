@@ -1,10 +1,39 @@
 import React from 'react'
 import './styles/maped.scss'
+
 const Mapeddata = (props:any) => {
+
+
     
 let fake='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuoiVnnWu_QbtFist_W7Hbz2V4drhwXDVyiw&usqp=CAU'
 const savetolocal=(local:any)=>{
-console.log(local)
+let bool:any=true
+let localdata:any=localStorage.getItem("fav")||"[]";
+localdata=JSON.parse(localdata);
+for(let i=0;i<=localdata.length;i++){
+    // console.log(localdata[i].id)
+    if(localdata.length===0){
+bool=true
+    }
+else if(localdata[i].id !== local.id){
+    bool=true;
+}
+else{
+    bool=false;
+    break;
+}
+}
+
+if(bool===true){
+  localdata.push(local);  
+}
+else{
+    alert("Item Already Exist")
+}
+
+localdata=JSON.stringify(localdata);
+localStorage.setItem("fav",localdata)
+
 }
 
   return (
